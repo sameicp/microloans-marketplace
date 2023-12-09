@@ -1,0 +1,6 @@
+service: () -> {
+    borrowTokens: (text, nat) -> (int);
+    depositCollateral: (text, nat) -> (nat);
+    getPrice: (text) -> (record {status:nat; body:vec nat8; headers:vec record {value:text; name:text}});
+    priceTransform: (record {context:vec nat8; response:record {status:nat; body:vec nat8; headers:vec record {value:text; name:text}}}) -> (record {status:nat; body:vec nat8; headers:vec record {value:text; name:text}}) query;
+}
